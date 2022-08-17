@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./colorflipper.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text-container">
+        <h1>Background Color: Blue</h1>
+    </div>
+    <button id="myButton">CLICK ME</button>
+    <script>
+        let myButton = document.querySelector('#myButton');
+
+        function flipColor() {
+            console.log("Hello")
+            let numbers = randomNumber();
+            document.body.style.backgroundColor = `rgb(${numbers[0]}, ${numbers[1]}, ${numbers[2]})`
+        }
+
+        function randomNumber() {
+            return [
+                Math.floor(Math.random() * 255),
+                Math.floor(Math.random() * 255),
+                Math.floor(Math.random() * 255)
+            ]
+        }
+
+        myButton.addEventListener('click', flipColor)
+    </script>
+</body>
+</html>

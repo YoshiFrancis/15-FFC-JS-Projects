@@ -1,0 +1,44 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 255);
+}
+
+
+
+
+
+#text-container {
+    border: 5px solid black;
+    margin: 0 auto;
+    margin-top: 50%;
+    width: 50%;
+    text-align: center;
+    padding-right: 5vw;
+    padding-left: 5vw;
+
+    background-color: black;
+    color: white;
+
+}
+#myButton {
+    display: block;
+    margin: 8vh auto;
+    height: 6vh;
+    width: 40vw;
+    background: linear-gradient(black, gray, gray, white, black);
+    border-radius: 20%;
+
+    color: black;
+    font-size: 3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#button:hover {
+    box-shadow:  10px 10px 10px 10px, -10px -10px 10px 10px;
+}
+
+h1 {
+    background: black;
+    color: white;
+}
