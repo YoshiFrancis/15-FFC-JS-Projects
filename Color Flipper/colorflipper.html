@@ -9,15 +9,17 @@
 </head>
 <body>
     <div id="text-container">
-        <h1>Background Color: Blue</h1>
+        <h1 id="text">Background Color: rgb(0, 0, 255)</h1>
     </div>
     <button id="myButton">CLICK ME</button>
     <script>
         let myButton = document.querySelector('#myButton');
-
+        let el_text = document.querySelector('#text')
         function flipColor() {
             console.log("Hello")
             let numbers = randomNumber();
+            el_text.innerHTML = `Background Color : rgb(${numbers[0]}, ${numbers[1]}, ${numbers[2]})`
+            el_text.style.color = `rgb(${numbers[0]}, ${numbers[1]}, ${numbers[2]})`
             document.body.style.backgroundColor = `rgb(${numbers[0]}, ${numbers[1]}, ${numbers[2]})`
         }
 

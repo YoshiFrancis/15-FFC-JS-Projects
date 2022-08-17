@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./counter.css">
+    <title>Counter</title>
+</head>
+<body>
+    <div id="container">
+        <div id="number-counter">
+            <p id="number">0</p>
+        </div>
+        <div id="button-container">
+            <button id="decrease" onclick="decreaseFunc()">Decrease</button>
+            <button id="reset" onclick="resetFunc()">Reset</button>
+            <button id="increase" onclick="increaseFunc()">Increment</button>
+        </div>
+    </div>
+    <script>
+        let counter = document.getElementById('number')
+        let decreaseBtn = document.querySelector('decrease')
+        let resetBtn = document.querySelector('reset')
+        let increaseBtn = document.querySelector('increase')
+        function decreaseFunc() {
+            counter.innerHTML = Number(counter.innerHTML) - 1
+        }
+    
+        function resetFunc() {
+            counter.innerHTML = 0;
+        }
+    
+        function increaseFunc() {
+            counter.innerHTML = Number(counter.innerHTML) + 1
+        }
+    
+    </script>
+</body>
+
+</html>
