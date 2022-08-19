@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#card {
+    border: 5px solid black;
+    width: 75%;
+    margin: 60% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./pictures/download.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+#circle {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+#picture {
+    position: absolute;
+    top: 27em;
+    left: 14em;
+    width: 25%;
+    border-radius: 50%;
+}
+
+#name {
+    margin-top: 2vh;
+    color: red;
+    font-size: 2em;
+}
+
+#job {
+    color: lightblue;
+    font-size: 1em;
+}
+
+#next-btn, #prev-btn {
+    padding: 5px;
+    font-size: 2em;
+    background-color: none;
+    border: 1px black none;
+    z-index: 2;
+}
+
+#next-btn:hover, #prev-btn:hover {
+    font-size: 2.5em;
+}
+
+#text {
+    color: gray;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#random {
+    margin-top: 1vh;
+    width: 50%;
+    color: coral;
+    font-size: 2em;
+    background-color: lightskyblue;
+    border: 1px red solid;;
+}

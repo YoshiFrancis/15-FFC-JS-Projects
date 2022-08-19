@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reviews.css">
+    <title>Reviews</title>
+</head>
+<body>
+    <h1> Reviews </h1>
+    <div id="card">
+        <div id="circle"></div>
+        <div id="picture-cotainer"><img id='picture' src='./pictures/yoshi.png' alt="person"></div>
+        <p id="name">name</p>
+        <p id="job">Job</p>
+        <div id="button-container">
+            <button id="next-btn" onclick="increment()"><</button>
+            <button id="prev-btn" onclick="decrement()">></button>
+        </div>
+        <p id="text">STUFF GOOD WITH PERSON</p>
+        <button id="random">Surprise Me</button>
+    </div>
+    <script>
+
+        let image = document.querySelector('#picture')
+        let name = document.querySelector('#name')
+        let job = document.querySelector('#job')
+        let text = document.querySelector('#text')
+        
+        let nextBtn = document.querySelector('#next-btn')
+        let prevbtn = document.querySelector('#prev-btn')
+        let employees = [
+            {
+                name: 'Yoshi',
+                image : './pictures/yoshi.png',
+                job: 'Mario Savior',
+                text: 'Yoshi is Goated'
+            }, 
+            {
+                name: 'Toadette',
+                image : './pictures/toadette.jpg',
+                job: 'Being Pink',
+                text: 'Pink is life'
+            },
+            {
+                name: 'Shyguy',
+                image : './pictures/shyguy.jpg',
+                job: 'Being Shy',
+                text: 'Why must I talk to anyone when they all look so dangerous?',
+            },
+            {
+                name: 'Mario',
+                image : './pictures/mario.jpg',
+                job: 'Rescue Peach',
+                text: 'I need Yoshi to win',
+            }
+        ]
+
+        let current = 0;
+
+        function increment() {
+            current++;
+            if (current = 4) current = 0
+            console.log(current)
+            setCard(employees[current])
+        }
+
+        function decrement() {
+            current--;
+            if (current = -1) current = 3;
+            console.log(current--)
+            setCard(employees[current])
+        }
+
+        function setCard(employee) {
+            image.src = employee.image;
+            name.innerHTML = employee.name;
+            job.innerHTML = employee.job;
+            text.innerHTML = employee.text;
+        }
+
+        
+    </script>
+</body>
+</html>

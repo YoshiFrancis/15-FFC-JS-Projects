@@ -25,14 +25,25 @@
         let increaseBtn = document.querySelector('increase')
         function decreaseFunc() {
             counter.innerHTML = Number(counter.innerHTML) - 1
+            if (Number(counter.innerHTML) < 0) {
+                counter.style.color = 'red'
+            } else if (Number(counter.innerHTML) === 0) {
+                counter.style.color = 'white'
+            }
         }
     
         function resetFunc() {
             counter.innerHTML = 0;
+            counter.style.color = 'white'
         }
     
         function increaseFunc() {
             counter.innerHTML = Number(counter.innerHTML) + 1
+            if (Number(counter.innerHTML) > 0) {
+                counter.style.color = 'green'
+            } else if (Number(counter.innerHTML) === 0) {
+                counter.style.color = 'white'
+            }
         }
     
     </script>
